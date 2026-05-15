@@ -1,0 +1,20 @@
+.timeline { display: grid; gap: 0; margin-top: 60px; }
+.timeline-row { display: grid; grid-template-columns: 220px 40px 1fr; gap: 32px; padding: 32px 0; align-items: start; }
+.timeline-row + .timeline-row { border-top: 1px solid var(--line); }
+.timeline-row .when .company { font-family: var(--display); font-size: 20px; font-weight: 500; letter-spacing: -0.015em; color: var(--ink); }
+.timeline-row .when .date { display: inline-block; margin-top: 8px; font-size: 12px; color: var(--ink-3); letter-spacing: 0.08em; text-transform: uppercase; }
+.timeline-row .marker { position: relative; display: flex; justify-content: center; padding-top: 6px; }
+.timeline-row .marker .dot { width: 16px; height: 16px; border-radius: 50%; background: var(--accent, var(--orange)); position: relative; z-index: 2; box-shadow: 0 0 0 4px var(--bg), 0 0 0 5px var(--accent, var(--orange)); }
+.timeline-row .marker::after { content: ""; position: absolute; top: 28px; bottom: -36px; left: 50%; width: 0; border-left: 1.5px dashed var(--line-2); transform: translateX(-50%); }
+.timeline-row:last-child .marker::after { display: none; }
+.timeline-row .what h3 { font-family: var(--display); font-size: 26px; font-weight: 600; letter-spacing: -0.02em; color: var(--ink); }
+.timeline-row .what h3 .place { font-size: 14px; font-weight: 500; font-style: italic; color: var(--ink-3); margin-left: 4px; }
+.timeline-row .what p { margin-top: 10px; color: var(--ink-2); font-size: 15.5px; line-height: 1.6; max-width: 60ch; }
+.timeline-row .what .stack { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 16px; }
+.timeline-row .what .stack span { font-size: 12px; padding: 5px 12px; background: rgba(0,0,0,0.04); border-radius: 999px; color: var(--ink-2); }
+@media (max-width: 720px) {
+  .timeline-row { grid-template-columns: 30px 1fr; gap: 20px; padding: 26px 0; }
+  .timeline-row .marker { grid-column: 1; grid-row: 1 / span 2; padding-top: 8px; }
+  .timeline-row .when   { grid-column: 2; }
+  .timeline-row .what   { grid-column: 2; margin-top: 14px; }
+}
