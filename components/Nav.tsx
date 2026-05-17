@@ -11,13 +11,13 @@ export default function Nav({ simple = false }: NavProps) {
   return (
     <nav className={`nav`}>
       <div className="container nav-inner">
-        <Link className="logo" href="/" aria-label="Home">
+        {/* <Link className="logo" href="/" aria-label="Home">
           <span className="logo-mark">GG</span>
           <span className="logo-text">
             Gamal Gaber
             <small>Full-Stack Dev</small>
           </span>
-        </Link>
+        </Link> */}
 
         {simple ? (
           <Link className="back-link" href="/">
