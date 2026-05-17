@@ -23,7 +23,7 @@ export default function HomePage() {
       </div>
 
       <Nav />
-
+      {/*  TODO: seperate home sections in new components */}
       {/* ── HERO ──────────────────────────────────── */}
       <header id="top" className="hero">
         <div className="shape float" data-parallax="0.14" style={{ top: 150, right: '4%', width: 130, height: 130, ['--dur' as string]: '7s', ['--delay' as string]: '-2s' }}>
@@ -88,13 +88,13 @@ export default function HomePage() {
                   <defs>
                     <path id="circle-path" d="M 100,100 m -78,0 a 78,78 0 1,1 156,0 a 78,78 0 1,1 -156,0" />
                   </defs>
-                  <text font-family="Bricolage Grotesque, sans-serif" font-size="13" font-weight="500" fill="#1A1A18" letter-spacing="3">
+                  <text fontFamily="Bricolage Grotesque, sans-serif" fontSize="13" fontWeight="500" fill="#1A1A18" letterSpacing="3">
                     <textPath href="#circle-path" startOffset="0">✦ SCROLL DOWN ✦ DISCOVER MY WORK </textPath>
                   </text>
                 </svg>
               </div>
               <div className="core">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M6 13l6 6 6-6" /></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><path d="M12 5v14M6 13l6 6 6-6" /></svg>
               </div>
             </div>
             <div className="hero-stats">
@@ -102,7 +102,7 @@ export default function HomePage() {
               <div className="divider" />
               <div className="stat reveal delay-2"><div className="n">10<span className="plus">+</span></div><div className="l">Projects<br />delivered</div></div>
               <div className="divider" />
-              <div className="stat reveal delay-3"><div className="n">2</div><div className="l">Tech stacks<br />mastered</div></div>
+              <div className="stat reveal delay-3"><div className="n">4</div><div className="l">Tech stacks<br />mastered</div></div>
               <div className="divider" />
               <div className="stat reveal delay-4"><div className="n">∞</div><div className="l">Cups of coffee<br />per week</div></div>
             </div>
@@ -134,7 +134,7 @@ export default function HomePage() {
               {[
                 { n: '1', accent: '+', label: 'Year experience', sub: 'Shipping production apps', color: 'var(--orange)', soft: 'rgba(232,93,38,0.12)', d: 2 },
                 { n: '10', accent: '+', label: 'Projects shipped', sub: 'Across 4 industries', color: 'var(--purple)', soft: 'rgba(123,94,167,0.12)', d: 3 },
-                { n: '3', accent: '', label: 'Tech stacks', sub: 'Laravel · Next · Shopify', color: 'var(--teal)', soft: 'rgba(29,158,117,0.12)', d: 4 },
+                { n: '4', accent: '', label: 'Tech stacks', sub: 'Laravel · Next · Shopify · Wordpress', color: 'var(--teal)', soft: 'rgba(29,158,117,0.12)', d: 4 },
                 { n: '100', accent: '%', label: 'Remote ready', sub: 'Async-first workflow', color: 'var(--blue)', soft: 'rgba(43,127,212,0.12)', d: 5 },
               ].map(s => (
                 <div key={s.label} className={`stat-card reveal delay-${s.d}`} style={{ ['--accent' as string]: s.color, ['--accent-soft' as string]: s.soft }}>
@@ -148,6 +148,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* TODO: up to down experience */}
       {/* ── EXPERIENCE ────────────────────────────── */}
       <section id="experience">
         <div className="shape float" data-parallax="0.08" style={{ top: 80, right: '6%', width: 90, height: 90, ['--dur' as string]: '6s' }}>
@@ -158,10 +159,9 @@ export default function HomePage() {
           <h2 className="section-title reveal delay-1">Where I&apos;ve <em>shipped</em> code.</h2>
           <div className="timeline">
             {[
-              { company: 'ME.INC', date: '2024 — Present', title: 'Founder & Full-Stack Developer', place: 'Remote', desc: 'Building a multi-brand digital products platform for Arabic-speaking markets end-to-end: multi-tenant architecture, a Claude AI tools engine, funnel / OTO logic, and Cloudflare R2 asset delivery.', stack: ['Laravel 11', 'Next.js', 'PostgreSQL', 'Claude API'], accent: 'var(--orange)', d: 0 },
-              { company: 'Tareeq طريق', date: 'Jun 2024 — May 2025', title: 'Full-Stack Developer', place: 'Cairo', desc: 'Lead developer on an Egyptian vehicle marketplace with AI price intelligence. Designed a modular Laravel monolith with three-guard auth, integrated pgvector for semantic search, and shipped the Next.js frontend for real-time listings.', stack: ['Laravel 11', 'pgvector', 'Redis', 'Next.js'], accent: 'var(--purple)', d: 1 },
-              { company: 'Peak.Studio', date: 'Mar 2025 — Jul 2025', title: 'Freelance Developer', place: 'Contract, Dubai', desc: 'Translated a polished Figma file into a pixel-faithful Next.js App Router site for a Dubai branding agency. Built a custom GSAP splash sequence, scroll-aware navbar, hover-glow buttons, and a multi-ellipse gradient overlay system.', stack: ['Next.js', 'TypeScript', 'GSAP', 'Tailwind v4'], accent: 'var(--teal)', d: 2 },
-              { company: 'Freelance · Self-Employed', date: '2023 — 2024', title: 'Shopify & Web Developer', place: 'Cairo', desc: 'Built and migrated Shopify stores for SMB clients across MENA, including Berry Bow. Delivered Arabic SEO across multiple collections, payment gateway integrations (Paymob, Bosta), and full operations handover documentation.', stack: ['Shopify', 'Liquid', 'Arabic SEO', 'Paymob'], accent: 'var(--blue)', d: 3 },
+              { company: 'Freelance', date: 'Jul 2024 — Nov 2024', title: 'Backend Developer', place: 'Cairo', desc: 'Built backend application for islam sobhi using laravel and deployed it to cpanel. ', stack: ['Laravel', 'MySQL', 'Deployment', 'WebSocket'], accent: 'var(--blue)', d: 3 },
+              { company: 'Egateweb', date: 'Dec 2024 — Jan 2026', title: 'Backend Developer', place: 'Netherlands - Remote', desc: 'Delivered 23 production projects for Dutch clients, including e-commerce platforms and food ordering & management systems. Built advanced product search with filtering and full-text search capabilities via a Filament admin dashboard. Achieved 40% improvement in database performance through strategic indexing and query caching.', stack: ['Laravel', 'Next.js', 'MySQL', 'Filament', 'Vue 3', 'Deployment'], accent: 'var(--orange)', d: 0 },
+              { company: 'Freelance', date: 'Jan 2026 — Present', title: 'Shopify & Web Developer', place: 'Cairo', desc: 'Built and migrated Shopify stores for SMB clients across MENA, including Berry Bow. Delivered Arabic SEO across multiple collections, payment gateway integrations (Paymob, Bosta), and full operations handover documentation.', stack: ['Shopify', 'Liquid', 'Arabic SEO', 'Paymob'], accent: 'var(--blue)', d: 3 },
             ].map(e => (
               <div key={e.company} className={`timeline-row reveal${e.d ? ` delay-${e.d}` : ''}`} style={{ ['--accent' as string]: e.accent }}>
                 <div className="when"><div className="company">{e.company}</div><div className="date">{e.date}</div></div>
@@ -179,14 +179,16 @@ export default function HomePage() {
 
       {/* ── EDUCATION ─────────────────────────────── */}
       <section id="education">
+        <div className="shape float" data-parallax="0.1" style={{ top: 250, right: '7%', width: 120, height: 120, ['--dur' as string]: '7s' }}>
+          <svg viewBox="0 0 120 120"><defs><linearGradient id="p2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#FFB078" /><stop offset="1" stopColor="#E85D26" /></linearGradient><linearGradient id="p2b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#C84517" /><stop offset="1" stopColor="#7A2A0E" /></linearGradient></defs><polygon points="60,8 110,100 60,82" fill="url(#p2)" /><polygon points="60,8 10,100 60,82" fill="url(#p2b)" /><polygon points="10,100 60,82 110,100 60,116" fill="#2A0F05" opacity="0.4" /></svg>
+        </div>
         <div className="container">
           <span className="section-eyebrow reveal">Education</span>
           <h2 className="section-title reveal delay-1">Learning <em>never stops.</em></h2>
           <div className="timeline">
             {[
-              { company: 'Cairo University', date: '2020 — 2024', title: 'B.Sc. Computer Science', place: 'Cairo, Egypt', desc: 'Focused on algorithms, distributed systems, and database design. Graduated with honors. Built side projects throughout — APIs, web apps, and an Arabic-first content engine that became the seed of ME.INC.', accent: 'var(--blue)', d: 0 },
+              { company: 'Modern Academy', date: '2021 — 2025', title: 'B.Sc. Computer Science', place: 'Cairo, Egypt', desc: 'Focused on algorithms, distributed systems, and database design. Graduated with honors. Built side projects throughout — APIs, web apps, and an Arabic-first content engine that became the seed of ME.INC.', accent: 'var(--blue)', d: 0 },
               { company: 'Self-taught', date: '2021 — Present', title: 'Full-Stack Engineering', place: 'Continuous', desc: 'Deep-dives into Laravel internals, Next.js App Router, PostgreSQL performance, and AI tooling. 10+ production projects shipped while learning in public on GitHub.', accent: 'var(--yellow)', d: 1 },
-              { company: 'Laracasts & Workshops', date: '2023 — 2024', title: 'Advanced Laravel & Next.js', place: 'Online', desc: 'Advanced Laravel architecture courses, Next.js App Router workshops, and database performance training. Continuous certification & community involvement.', accent: 'var(--purple)', d: 2 },
             ].map(e => (
               <div key={e.company} className={`timeline-row reveal${e.d ? ` delay-${e.d}` : ''}`} style={{ ['--accent' as string]: e.accent }}>
                 <div className="when"><div className="company">{e.company}</div><div className="date">{e.date}</div></div>
@@ -203,19 +205,16 @@ export default function HomePage() {
 
       {/* ── SKILLS ────────────────────────────────── */}
       <section id="skills">
-        <div className="shape float" data-parallax="0.08" style={{ top: 90, left: '4%', width: 90, height: 90, ['--dur' as string]: '7s', ['--delay' as string]: '-2s' }}>
-          <svg viewBox="0 0 100 100"><defs><radialGradient id="s2" cx="35%" cy="30%" r="70%"><stop offset="0%" stopColor="#9EC3F0" /><stop offset="55%" stopColor="#2B7FD4" /><stop offset="100%" stopColor="#0F4587" /></radialGradient></defs><circle cx="50" cy="50" r="46" fill="url(#s2)" /><ellipse cx="36" cy="32" rx="14" ry="8" fill="rgba(255,255,255,0.5)" /></svg>
-        </div>
         <div className="container">
           <span className="section-eyebrow reveal">Skills</span>
           <h2 className="section-title reveal delay-1">What I work <em>with.</em></h2>
           <div className="bento">
             <div className="bento-card feat reveal delay-1" style={{ ['--accent' as string]: 'var(--orange)', ['--accent-soft' as string]: 'rgba(232,93,38,0.18)' }}>
               <div className="top">
-                <div className="icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" fill="none" stroke="#1A1A18" strokeWidth="1.4" /></svg></div>
+                <div className="icon"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="52" viewBox="0 0 50 52"><title>Logomark</title><path d="M49.626 11.564a.809.809 0 0 1 .028.209v10.972a.8.8 0 0 1-.402.694l-9.209 5.302V39.25c0 .286-.152.55-.4.694L20.42 51.01c-.044.025-.092.041-.14.058-.018.006-.035.017-.054.022a.805.805 0 0 1-.41 0c-.022-.006-.042-.018-.063-.026-.044-.016-.09-.03-.132-.054L.402 39.944A.801.801 0 0 1 0 39.25V6.334c0-.072.01-.142.028-.21.006-.023.02-.044.028-.067.015-.042.029-.085.051-.124.015-.026.037-.047.055-.071.023-.032.044-.065.071-.093.023-.023.053-.04.079-.06.029-.024.055-.05.088-.069h.001l9.61-5.533a.802.802 0 0 1 .8 0l9.61 5.533h.002c.032.02.059.045.088.068.026.02.055.038.078.06.028.029.048.062.072.094.017.024.04.045.054.071.023.04.036.082.052.124.008.023.022.044.028.068a.809.809 0 0 1 .028.209v20.559l8.008-4.611v-10.51c0-.07.01-.141.028-.208.007-.024.02-.045.028-.068.016-.042.03-.085.052-.124.015-.026.037-.047.054-.071.024-.032.044-.065.072-.093.023-.023.052-.04.078-.06.03-.024.056-.05.088-.069h.001l9.611-5.533a.801.801 0 0 1 .8 0l9.61 5.533c.034.02.06.045.09.068.025.02.054.038.077.06.028.029.048.062.072.094.018.024.04.045.054.071.023.039.036.082.052.124.009.023.022.044.028.068zm-1.574 10.718v-9.124l-3.363 1.936-4.646 2.675v9.124l8.01-4.611zm-9.61 16.505v-9.13l-4.57 2.61-13.05 7.448v9.216l17.62-10.144zM1.602 7.719v31.068L19.22 48.93v-9.214l-9.204-5.209-.003-.002-.004-.002c-.031-.018-.057-.044-.086-.066-.025-.02-.054-.036-.076-.058l-.002-.003c-.026-.025-.044-.056-.066-.084-.02-.027-.044-.05-.06-.078l-.001-.003c-.018-.03-.029-.066-.042-.1-.013-.03-.03-.058-.038-.09v-.001c-.01-.038-.012-.078-.016-.117-.004-.03-.012-.06-.012-.09v-.002-21.481L4.965 9.654 1.602 7.72zm8.81-5.994L2.405 6.334l8.005 4.609 8.006-4.61-8.006-4.608zm4.164 28.764l4.645-2.674V7.719l-3.363 1.936-4.646 2.675v20.096l3.364-1.937zM39.243 7.164l-8.006 4.609 8.006 4.609 8.005-4.61-8.005-4.608zm-.801 10.605l-4.646-2.675-3.363-1.936v9.124l4.645 2.674 3.364 1.937v-9.124zM20.02 38.33l11.743-6.704 5.87-3.35-8-4.606-9.211 5.303-8.395 4.833 7.993 4.524z" fill="#FF2D20" fillRule="evenodd"/></svg></div>
                 <div className="num" style={{ color: 'rgba(255,255,255,0.5)' }}>01 / Backend</div>
               </div>
-              <div><h3>Laravel + PHP</h3><p>Modular monoliths, three-guard auth, queues, jobs, pgvector AI search. Production-grade Laravel 11.</p></div>
+              <div><h3>Laravel + PHP</h3><p>Modular monoliths, Filament admin, three-guard auth, queues, jobs, WebSocket, pgvector AI search. Production-grade Laravel.</p></div>
               <div className="corner" style={{ background: 'var(--orange)', opacity: 0.25 }} />
             </div>
 
@@ -225,23 +224,25 @@ export default function HomePage() {
               <div className="corner" />
             </div>
 
-            <div className="bento-card tall reveal delay-3" style={{ ['--accent' as string]: 'var(--teal)', ['--accent-soft' as string]: 'rgba(29,158,117,0.15)' }}>
-              <div className="top"><div className="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><ellipse cx="12" cy="5" rx="9" ry="3" /><path d="M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5" /><path d="M3 12c0 1.7 4 3 9 3s9-1.3 9-3" /></svg></div><div className="num">03</div></div>
-              <div><h3>PostgreSQL</h3><p>Schema design, indexing, full-text search, pgvector for AI embeddings.</p></div>
+            <div className="bento-card tall  reveal delay-2" style={{ ['--accent' as string]: 'var(--teal)', ['--accent-soft' as string]: 'rgba(29,158,117,0.15)' }}>
+              <div className="top">
+              <div className="top"><div className="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><ellipse cx="12" cy="5" rx="9" ry="3" /><path d="M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5" /><path d="M3 12c0 1.7 4 3 9 3s9-1.3 9-3" /></svg></div></div>
+                <div className="num">03 / Database</div>
+              </div>
+              <div><h3>Database</h3><p>Schema design, indexing, full-text search, pgvector for AI embeddings, strategic indexing, query optimization. 40% perf gains through caching. <span className="hl">Using PostgreSQL & MySQL.</span></p></div>
               <div className="corner" />
             </div>
 
-            <div className="bento-card std reveal delay-3" style={{ ['--accent' as string]: 'var(--orange)', ['--accent-soft' as string]: 'rgba(232,93,38,0.15)' }}>
+            <div className="bento-card std reveal delay-4" style={{ ['--accent' as string]: 'var(--orange)', ['--accent-soft' as string]: 'rgba(232,93,38,0.15)' }}>
               <div className="top"><div className="icon">⚡</div></div>
-              <div><h3>Redis</h3><p>Cache, queues, rate-limit.</p></div>
+              <div><h3>Redis</h3><p>Cache, queues, rate-limit, session.</p></div>
             </div>
-
-            <div className="bento-card std reveal delay-4" style={{ ['--accent' as string]: 'var(--blue)', ['--accent-soft' as string]: 'rgba(43,127,212,0.15)' }}>
+            <div className="bento-card wide-1 reveal delay-4" style={{ ['--accent' as string]: 'var(--blue)', ['--accent-soft' as string]: 'rgba(43,127,212,0.15)' }}>
               <div className="top"><div className="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><rect x="2" y="6" width="20" height="12" rx="2" /><line x1="6" y1="10" x2="6" y2="14" /><line x1="10" y1="10" x2="10" y2="14" /><line x1="14" y1="10" x2="14" y2="14" /></svg></div></div>
-              <div><h3>Docker</h3><p>Compose stacks for local dev.</p></div>
+              <div><h3>Docker</h3><p>Compose stacks for local dev &amp; deployment.</p></div>
             </div>
 
-            <div className="bento-card wide-1 reveal delay-4" style={{ ['--accent' as string]: 'var(--purple)', ['--accent-soft' as string]: 'rgba(123,94,167,0.15)' }}>
+            <div className="bento-card wide-1 reveal delay-5" style={{ ['--accent' as string]: 'var(--purple)', ['--accent-soft' as string]: 'rgba(123,94,167,0.15)' }}>
               <div className="top"><div className="icon">{'{ }'}</div><div className="num">REST + RPC</div></div>
               <div><h3>API design</h3><p>OpenAPI specs, versioned endpoints, clean DTO contracts.</p></div>
               <div className="corner" />
@@ -249,12 +250,12 @@ export default function HomePage() {
 
             <div className="bento-card std reveal delay-5" style={{ ['--accent' as string]: 'var(--yellow)', ['--accent-soft' as string]: 'rgba(232,168,32,0.18)' }}>
               <div className="top"><div className="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><circle cx="12" cy="12" r="3" /><circle cx="5" cy="6" r="2" /><circle cx="19" cy="6" r="2" /><path d="M5 8v3a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8" /><path d="M12 15v2" /></svg></div></div>
-              <div><h3>Git / GitHub</h3><p>Branching, PRs, Actions.</p></div>
+              <div><h3>Git / GitHub</h3><p>Branching, PRs, Actions CI/CD.</p></div>
             </div>
 
-            <div className="bento-card std reveal delay-5" style={{ ['--accent' as string]: 'var(--teal)', ['--accent-soft' as string]: 'rgba(29,158,117,0.15)' }}>
+            <div className="bento-card wide-1 reveal delay-5" style={{ ['--accent' as string]: 'var(--teal)', ['--accent-soft' as string]: 'rgba(29,158,117,0.15)' }}>
               <div className="top"><div className="icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 12l10 10 10-10z" /></svg></div></div>
-              <div><h3>Tailwind CSS</h3><p>Design systems &amp; tokens.</p></div>
+              <div><h3>Tailwind CSS</h3><p>Design systems, tokens, responsive layouts.</p></div>
             </div>
 
             <div className="bento-card wide-1 reveal delay-6" style={{ ['--accent' as string]: 'var(--blue)', ['--accent-soft' as string]: 'rgba(43,127,212,0.15)' }}>
@@ -279,11 +280,9 @@ export default function HomePage() {
               <span className="section-eyebrow reveal">Selected Work</span>
               <h2 className="section-title reveal delay-1">Recent <em>builds.</em></h2>
             </div>
-            <Link href="/projects" className="scroll-hint reveal delay-2">
-              <span>View all projects</span>
-              <span className="bar" />
-              <span style={{ fontFamily: 'var(--display)', color: 'var(--ink)', fontSize: 16 }}>→</span>
-            </Link>
+            <Link href="/projects" className="btn primary">
+              All projects
+<span className="arrow">→</span>            </Link>
           </div>
         </div>
         <ProjectsRail />
@@ -291,9 +290,6 @@ export default function HomePage() {
 
       {/* ── CONTACT ───────────────────────────────── */}
       <section id="contact">
-        <div className="shape float" data-parallax="0.1" style={{ top: 80, right: '7%', width: 120, height: 120, ['--dur' as string]: '7s' }}>
-          <svg viewBox="0 0 120 120"><defs><linearGradient id="p2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#FFB078" /><stop offset="1" stopColor="#E85D26" /></linearGradient><linearGradient id="p2b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#C84517" /><stop offset="1" stopColor="#7A2A0E" /></linearGradient></defs><polygon points="60,8 110,100 60,82" fill="url(#p2)" /><polygon points="60,8 10,100 60,82" fill="url(#p2b)" /><polygon points="10,100 60,82 110,100 60,116" fill="#2A0F05" opacity="0.4" /></svg>
-        </div>
         <div className="container">
           <span className="section-eyebrow reveal">Contact</span>
           <h2 className="contact-title reveal delay-1">Let&apos;s build <em>something</em> together.</h2>
