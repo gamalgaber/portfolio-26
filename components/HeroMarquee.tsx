@@ -1,9 +1,9 @@
 'use client'
 
 const ITEMS = [
-  'Laravel', 'Next.js', 'React', 'PHP', 'PostgreSQL', 'Redis',
-  'Docker', 'REST APIs', 'Full-Stack Developer', 'Open to Work',
-  'TypeScript', 'Tailwind', 'Linux',
+  'PHP', 'Laravel', 'Wordpress', 'MySQL', 'PostgreSQL', 'Redis',
+  'Javascript', 'TypeScript', 'Tailwind', 'React', 'Next.js',
+  'Git', 'Linux', 'Docker', 'REST APIs', 'Golang'
 ]
 
 function Track() {
