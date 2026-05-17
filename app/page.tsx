@@ -26,26 +26,15 @@ export default function HomePage() {
 
       {/* ── HERO ──────────────────────────────────── */}
       <header id="top" className="hero">
-        {/* Floating shapes */}
-        <div className="shape float" data-parallax="0.08" style={{ top: 200, left: '6%', width: 110, height: 110, ['--dur' as string]: '6s' }}>
-          <svg viewBox="0 0 100 100"><defs><radialGradient id="s1" cx="35%" cy="30%" r="70%"><stop offset="0%" stopColor="#C8B0E2"/><stop offset="55%" stopColor="#7B5EA7"/><stop offset="100%" stopColor="#3A2A60"/></radialGradient></defs><circle cx="50" cy="50" r="46" fill="url(#s1)"/><ellipse cx="36" cy="32" rx="14" ry="8" fill="rgba(255,255,255,0.5)"/></svg>
-        </div>
         <div className="shape float" data-parallax="0.14" style={{ top: 150, right: '4%', width: 130, height: 130, ['--dur' as string]: '7s', ['--delay' as string]: '-2s' }}>
-          <svg viewBox="0 0 120 120"><defs><linearGradient id="p1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#FFB078"/><stop offset="1" stopColor="#E85D26"/></linearGradient><linearGradient id="p1b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#C84517"/><stop offset="1" stopColor="#7A2A0E"/></linearGradient></defs><polygon points="60,8 110,100 60,82" fill="url(#p1)"/><polygon points="60,8 10,100 60,82" fill="url(#p1b)"/><polygon points="10,100 60,82 110,100 60,116" fill="#2A0F05" opacity="0.4"/></svg>
+          <svg viewBox="0 0 120 120"><defs><linearGradient id="p1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#FFB078" /><stop offset="1" stopColor="#E85D26" /></linearGradient><linearGradient id="p1b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#C84517" /><stop offset="1" stopColor="#7A2A0E" /></linearGradient></defs><polygon points="60,8 110,100 60,82" fill="url(#p1)" /><polygon points="60,8 10,100 60,82" fill="url(#p1b)" /><polygon points="10,100 60,82 110,100 60,116" fill="#2A0F05" opacity="0.4" /></svg>
         </div>
-        <div className="shape float" data-parallax="0.1" style={{ bottom: '12%', right: '12%', width: 90, height: 90, ['--dur' as string]: '5s', ['--delay' as string]: '-1s', animationName: 'float-alt' }}>
-          <svg viewBox="0 0 100 100"><defs><linearGradient id="st1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#5FC9A4"/><stop offset="1" stopColor="#0F6F4E"/></linearGradient></defs><path d="M50 5 L60 40 L95 50 L60 60 L50 95 L40 60 L5 50 L40 40 Z" fill="url(#st1)"/></svg>
-        </div>
-        <div className="shape float" data-parallax="0.06" style={{ bottom: '22%', left: '10%', width: 95, height: 95, ['--dur' as string]: '8s', ['--delay' as string]: '-3s' }}>
-          <svg viewBox="0 0 100 100"><defs><linearGradient id="c1a" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#FFD68A"/><stop offset="1" stopColor="#E8A820"/></linearGradient><linearGradient id="c1b" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stopColor="#B07A11"/><stop offset="1" stopColor="#6E4A05"/></linearGradient></defs><polygon points="50,10 90,28 50,46 10,28" fill="url(#c1a)"/><polygon points="10,28 50,46 50,90 10,72" fill="#9F6A0F"/><polygon points="90,28 50,46 50,90 90,72" fill="url(#c1b)"/></svg>
+        <div className="shape float" data-parallax="0.06" style={{ bottom: '54%', left: '8%', width: 130, height: 130, ['--dur' as string]: '8s', ['--delay' as string]: '-3s' }}>
+          <svg viewBox="0 0 100 100"><defs><linearGradient id="c1a" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#FFD68A" /><stop offset="1" stopColor="#E8A820" /></linearGradient><linearGradient id="c1b" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stopColor="#B07A11" /><stop offset="1" stopColor="#6E4A05" /></linearGradient></defs><polygon points="50,10 90,28 50,46 10,28" fill="url(#c1a)" /><polygon points="10,28 50,46 50,90 10,72" fill="#9F6A0F" /><polygon points="90,28 50,46 50,90 90,72" fill="url(#c1b)" /></svg>
         </div>
 
         <div className="container">
           <div className="hero-meta reveal">
-            <div className="meta-pill">
-              <span className="avatars"><span /><span /><span /></span>
-              Trusted by 10+ clients worldwide
-            </div>
             <div className="meta-pill location">
               <span className="ping" />
               Cairo, Egypt · Open to remote
@@ -55,7 +44,7 @@ export default function HomePage() {
           <h1 className="display-name reveal delay-1" aria-label="Gamal Gaber">
             <span className="row">
               Gamal
-              <span className="swatch" aria-hidden="true" />
+              <br />
               <span className="ital">Gaber.</span>
             </span>
             <span className="row second">
@@ -96,16 +85,16 @@ export default function HomePage() {
             <div className="scroll-badge reveal" title="Scroll down">
               <div className="ring">
                 <svg viewBox="0 0 200 200" width="130" height="130">
-                  <defs><path id="cp" d="M 100,100 m -78,0 a 78,78 0 1,1 156,0 a 78,78 0 1,1 -156,0" /></defs>
-                  <text fontFamily="Bricolage Grotesque, sans-serif" fontSize="13" fontWeight="500" fill="#1A1A18" letterSpacing="3">
-                    <textPath href="#cp" startOffset="0">✦ SCROLL DOWN ✦ DISCOVER MY WORK </textPath>
+                  <defs>
+                    <path id="circle-path" d="M 100,100 m -78,0 a 78,78 0 1,1 156,0 a 78,78 0 1,1 -156,0" />
+                  </defs>
+                  <text font-family="Bricolage Grotesque, sans-serif" font-size="13" font-weight="500" fill="#1A1A18" letter-spacing="3">
+                    <textPath href="#circle-path" startOffset="0">✦ SCROLL DOWN ✦ DISCOVER MY WORK </textPath>
                   </text>
                 </svg>
               </div>
               <div className="core">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
-                  <path d="M12 5v14M6 13l6 6 6-6" />
-                </svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M6 13l6 6 6-6" /></svg>
               </div>
             </div>
             <div className="hero-stats">
@@ -113,7 +102,7 @@ export default function HomePage() {
               <div className="divider" />
               <div className="stat reveal delay-2"><div className="n">10<span className="plus">+</span></div><div className="l">Projects<br />delivered</div></div>
               <div className="divider" />
-              <div className="stat reveal delay-3"><div className="n">3</div><div className="l">Tech stacks<br />mastered</div></div>
+              <div className="stat reveal delay-3"><div className="n">2</div><div className="l">Tech stacks<br />mastered</div></div>
               <div className="divider" />
               <div className="stat reveal delay-4"><div className="n">∞</div><div className="l">Cups of coffee<br />per week</div></div>
             </div>
@@ -124,7 +113,7 @@ export default function HomePage() {
       {/* ── ABOUT ─────────────────────────────────── */}
       <section id="about" className="about">
         <div className="shape float" data-parallax="0.1" style={{ top: 60, right: '5%', width: 110, height: 110, ['--dur' as string]: '6s' }}>
-          <svg viewBox="0 0 100 100"><defs><linearGradient id="c2a" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#7BD9B9"/><stop offset="1" stopColor="#1D9E75"/></linearGradient></defs><polygon points="50,10 90,28 50,46 10,28" fill="url(#c2a)"/><polygon points="10,28 50,46 50,90 10,72" fill="#0E6E4F"/><polygon points="90,28 50,46 50,90 90,72" fill="#168A66"/></svg>
+          <svg viewBox="0 0 100 100"><defs><linearGradient id="c2a" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#7BD9B9" /><stop offset="1" stopColor="#1D9E75" /></linearGradient></defs><polygon points="50,10 90,28 50,46 10,28" fill="url(#c2a)" /><polygon points="10,28 50,46 50,90 10,72" fill="#0E6E4F" /><polygon points="90,28 50,46 50,90 90,72" fill="#168A66" /></svg>
         </div>
         <div className="container">
           <span className="section-eyebrow reveal">About</span>
@@ -162,7 +151,7 @@ export default function HomePage() {
       {/* ── EXPERIENCE ────────────────────────────── */}
       <section id="experience">
         <div className="shape float" data-parallax="0.08" style={{ top: 80, right: '6%', width: 90, height: 90, ['--dur' as string]: '6s' }}>
-          <svg viewBox="0 0 100 100"><defs><radialGradient id="se" cx="35%" cy="30%" r="70%"><stop offset="0%" stopColor="#FFB078"/><stop offset="55%" stopColor="#E85D26"/><stop offset="100%" stopColor="#7A2A0E"/></radialGradient></defs><circle cx="50" cy="50" r="46" fill="url(#se)"/><ellipse cx="36" cy="32" rx="14" ry="8" fill="rgba(255,255,255,0.5)"/></svg>
+          <svg viewBox="0 0 100 100"><defs><radialGradient id="se" cx="35%" cy="30%" r="70%"><stop offset="0%" stopColor="#FFB078" /><stop offset="55%" stopColor="#E85D26" /><stop offset="100%" stopColor="#7A2A0E" /></radialGradient></defs><circle cx="50" cy="50" r="46" fill="url(#se)" /><ellipse cx="36" cy="32" rx="14" ry="8" fill="rgba(255,255,255,0.5)" /></svg>
         </div>
         <div className="container">
           <span className="section-eyebrow reveal">Experience</span>
@@ -215,7 +204,7 @@ export default function HomePage() {
       {/* ── SKILLS ────────────────────────────────── */}
       <section id="skills">
         <div className="shape float" data-parallax="0.08" style={{ top: 90, left: '4%', width: 90, height: 90, ['--dur' as string]: '7s', ['--delay' as string]: '-2s' }}>
-          <svg viewBox="0 0 100 100"><defs><radialGradient id="s2" cx="35%" cy="30%" r="70%"><stop offset="0%" stopColor="#9EC3F0"/><stop offset="55%" stopColor="#2B7FD4"/><stop offset="100%" stopColor="#0F4587"/></radialGradient></defs><circle cx="50" cy="50" r="46" fill="url(#s2)"/><ellipse cx="36" cy="32" rx="14" ry="8" fill="rgba(255,255,255,0.5)"/></svg>
+          <svg viewBox="0 0 100 100"><defs><radialGradient id="s2" cx="35%" cy="30%" r="70%"><stop offset="0%" stopColor="#9EC3F0" /><stop offset="55%" stopColor="#2B7FD4" /><stop offset="100%" stopColor="#0F4587" /></radialGradient></defs><circle cx="50" cy="50" r="46" fill="url(#s2)" /><ellipse cx="36" cy="32" rx="14" ry="8" fill="rgba(255,255,255,0.5)" /></svg>
         </div>
         <div className="container">
           <span className="section-eyebrow reveal">Skills</span>
@@ -223,7 +212,7 @@ export default function HomePage() {
           <div className="bento">
             <div className="bento-card feat reveal delay-1" style={{ ['--accent' as string]: 'var(--orange)', ['--accent-soft' as string]: 'rgba(232,93,38,0.18)' }}>
               <div className="top">
-                <div className="icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8" fill="none" stroke="#1A1A18" strokeWidth="1.4"/></svg></div>
+                <div className="icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" fill="none" stroke="#1A1A18" strokeWidth="1.4" /></svg></div>
                 <div className="num" style={{ color: 'rgba(255,255,255,0.5)' }}>01 / Backend</div>
               </div>
               <div><h3>Laravel + PHP</h3><p>Modular monoliths, three-guard auth, queues, jobs, pgvector AI search. Production-grade Laravel 11.</p></div>
@@ -237,7 +226,7 @@ export default function HomePage() {
             </div>
 
             <div className="bento-card tall reveal delay-3" style={{ ['--accent' as string]: 'var(--teal)', ['--accent-soft' as string]: 'rgba(29,158,117,0.15)' }}>
-              <div className="top"><div className="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5"/><path d="M3 12c0 1.7 4 3 9 3s9-1.3 9-3"/></svg></div><div className="num">03</div></div>
+              <div className="top"><div className="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><ellipse cx="12" cy="5" rx="9" ry="3" /><path d="M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5" /><path d="M3 12c0 1.7 4 3 9 3s9-1.3 9-3" /></svg></div><div className="num">03</div></div>
               <div><h3>PostgreSQL</h3><p>Schema design, indexing, full-text search, pgvector for AI embeddings.</p></div>
               <div className="corner" />
             </div>
@@ -248,7 +237,7 @@ export default function HomePage() {
             </div>
 
             <div className="bento-card std reveal delay-4" style={{ ['--accent' as string]: 'var(--blue)', ['--accent-soft' as string]: 'rgba(43,127,212,0.15)' }}>
-              <div className="top"><div className="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><rect x="2" y="6" width="20" height="12" rx="2"/><line x1="6" y1="10" x2="6" y2="14"/><line x1="10" y1="10" x2="10" y2="14"/><line x1="14" y1="10" x2="14" y2="14"/></svg></div></div>
+              <div className="top"><div className="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><rect x="2" y="6" width="20" height="12" rx="2" /><line x1="6" y1="10" x2="6" y2="14" /><line x1="10" y1="10" x2="10" y2="14" /><line x1="14" y1="10" x2="14" y2="14" /></svg></div></div>
               <div><h3>Docker</h3><p>Compose stacks for local dev.</p></div>
             </div>
 
@@ -259,12 +248,12 @@ export default function HomePage() {
             </div>
 
             <div className="bento-card std reveal delay-5" style={{ ['--accent' as string]: 'var(--yellow)', ['--accent-soft' as string]: 'rgba(232,168,32,0.18)' }}>
-              <div className="top"><div className="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><circle cx="12" cy="12" r="3"/><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><path d="M5 8v3a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8"/><path d="M12 15v2"/></svg></div></div>
+              <div className="top"><div className="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><circle cx="12" cy="12" r="3" /><circle cx="5" cy="6" r="2" /><circle cx="19" cy="6" r="2" /><path d="M5 8v3a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8" /><path d="M12 15v2" /></svg></div></div>
               <div><h3>Git / GitHub</h3><p>Branching, PRs, Actions.</p></div>
             </div>
 
             <div className="bento-card std reveal delay-5" style={{ ['--accent' as string]: 'var(--teal)', ['--accent-soft' as string]: 'rgba(29,158,117,0.15)' }}>
-              <div className="top"><div className="icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 12l10 10 10-10z"/></svg></div></div>
+              <div className="top"><div className="icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 12l10 10 10-10z" /></svg></div></div>
               <div><h3>Tailwind CSS</h3><p>Design systems &amp; tokens.</p></div>
             </div>
 
@@ -275,7 +264,7 @@ export default function HomePage() {
             </div>
 
             <div className="bento-card std reveal delay-6" style={{ ['--accent' as string]: 'var(--ink)', ['--accent-soft' as string]: 'rgba(0,0,0,0.08)' }}>
-              <div className="top"><div className="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg></div></div>
+              <div className="top"><div className="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><polyline points="4 17 10 11 4 5" /><line x1="12" y1="19" x2="20" y2="19" /></svg></div></div>
               <div><h3>Linux / CLI</h3><p>Tmux, vim, fish, zsh.</p></div>
             </div>
           </div>
@@ -303,7 +292,7 @@ export default function HomePage() {
       {/* ── CONTACT ───────────────────────────────── */}
       <section id="contact">
         <div className="shape float" data-parallax="0.1" style={{ top: 80, right: '7%', width: 120, height: 120, ['--dur' as string]: '7s' }}>
-          <svg viewBox="0 0 120 120"><defs><linearGradient id="p2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#FFB078"/><stop offset="1" stopColor="#E85D26"/></linearGradient><linearGradient id="p2b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#C84517"/><stop offset="1" stopColor="#7A2A0E"/></linearGradient></defs><polygon points="60,8 110,100 60,82" fill="url(#p2)"/><polygon points="60,8 10,100 60,82" fill="url(#p2b)"/><polygon points="10,100 60,82 110,100 60,116" fill="#2A0F05" opacity="0.4"/></svg>
+          <svg viewBox="0 0 120 120"><defs><linearGradient id="p2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#FFB078" /><stop offset="1" stopColor="#E85D26" /></linearGradient><linearGradient id="p2b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#C84517" /><stop offset="1" stopColor="#7A2A0E" /></linearGradient></defs><polygon points="60,8 110,100 60,82" fill="url(#p2)" /><polygon points="60,8 10,100 60,82" fill="url(#p2b)" /><polygon points="10,100 60,82 110,100 60,116" fill="#2A0F05" opacity="0.4" /></svg>
         </div>
         <div className="container">
           <span className="section-eyebrow reveal">Contact</span>
@@ -320,13 +309,13 @@ export default function HomePage() {
                 style={{ ['--accent' as string]: 'var(--orange)', ['--accent-soft' as string]: 'rgba(232,93,38,0.12)' }}
               >
                 <div className="label">
-                  <span className="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><rect x="2" y="5" width="20" height="14" rx="2"/><polyline points="2 7 12 14 22 7"/></svg></span>
+                  <span className="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><rect x="2" y="5" width="20" height="14" rx="2" /><polyline points="2 7 12 14 22 7" /></svg></span>
                   Email
                 </div>
                 <div className="v">gamalgaber003@gmail.com</div>
                 <div className="footer-row">
                   <span>Tap to email</span>
-                  <span className="go"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+                  <span className="go"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 17L17 7M9 7h8v8" /></svg></span>
                 </div>
               </a>
 
@@ -338,28 +327,28 @@ export default function HomePage() {
                 style={{ ['--accent' as string]: 'var(--blue)', ['--accent-soft' as string]: 'rgba(43,127,212,0.12)' }}
               >
                 <div className="label">
-                  <span className="ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8h4.56v14H.22V8zM8 8h4.37v1.92h.06A4.79 4.79 0 0 1 16.74 7.5C21 7.5 22 10.2 22 13.7V22h-4.5v-7.4c0-1.77-.03-4.05-2.47-4.05s-2.85 1.93-2.85 3.92V22H8V8z"/></svg></span>
+                  <span className="ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8h4.56v14H.22V8zM8 8h4.37v1.92h.06A4.79 4.79 0 0 1 16.74 7.5C21 7.5 22 10.2 22 13.7V22h-4.5v-7.4c0-1.77-.03-4.05-2.47-4.05s-2.85 1.93-2.85 3.92V22H8V8z" /></svg></span>
                   LinkedIn · new tab
                 </div>
                 <div className="v">/in/gamalgaber</div>
                 <div className="footer-row">
                   <span>Connect with me</span>
-                  <span className="go"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+                  <span className="go"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 17L17 7M9 7h8v8" /></svg></span>
                 </div>
               </a>
 
               <div className="socials">
                 {[
-                  { href: 'https://github.com/gamalgaber', label: 'GitHub', icon: <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2.16c-3.2.69-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.28 1.18-3.09-.12-.3-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.17a10.9 10.9 0 0 1 5.74 0c2.18-1.48 3.14-1.17 3.14-1.17.62 1.58.23 2.74.11 3.04.73.81 1.18 1.83 1.18 3.09 0 4.42-2.69 5.39-5.25 5.68.41.36.77 1.06.77 2.13v3.16c0 .31.21.67.8.56C20.21 21.39 23.5 17.07 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg> },
-                  { href: 'https://linkedin.com/in/gamalgaber', label: 'LinkedIn', icon: <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8h4.56v14H.22V8zM8 8h4.37v1.92h.06A4.79 4.79 0 0 1 16.74 7.5C21 7.5 22 10.2 22 13.7V22h-4.5v-7.4c0-1.77-.03-4.05-2.47-4.05s-2.85 1.93-2.85 3.92V22H8V8z"/></svg> },
-                  { href: 'https://upwork.com/freelancers/gamal', label: 'Upwork', icon: <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 11.4a3.6 3.6 0 0 1-3.6-3.6 3.6 3.6 0 0 1 3.6-3.6 3.6 3.6 0 0 1 3.6 3.6 3.6 3.6 0 0 1-3.6 3.6zm0-5.4a1.8 1.8 0 1 0 0 3.6 1.8 1.8 0 0 0 0-3.6zM5.4 14.6a3.6 3.6 0 0 1-3.6-3.6V4.2h1.8v6.8c0 1 .8 1.8 1.8 1.8s1.8-.8 1.8-1.8V4.2H9V9c1.3 2.5 3.2 5 6 5v1.8c-3.6 0-5.9-2.8-7.3-5.3-.5 2.5-2.4 4.1-2.3 4.1z"/></svg> },
+                  { href: 'https://github.com/gamalgaber', label: 'GitHub', icon: <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2.16c-3.2.69-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.28 1.18-3.09-.12-.3-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.17a10.9 10.9 0 0 1 5.74 0c2.18-1.48 3.14-1.17 3.14-1.17.62 1.58.23 2.74.11 3.04.73.81 1.18 1.83 1.18 3.09 0 4.42-2.69 5.39-5.25 5.68.41.36.77 1.06.77 2.13v3.16c0 .31.21.67.8.56C20.21 21.39 23.5 17.07 23.5 12 23.5 5.65 18.35.5 12 .5z" /></svg> },
+                  { href: 'https://linkedin.com/in/gamalgaber', label: 'LinkedIn', icon: <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8h4.56v14H.22V8zM8 8h4.37v1.92h.06A4.79 4.79 0 0 1 16.74 7.5C21 7.5 22 10.2 22 13.7V22h-4.5v-7.4c0-1.77-.03-4.05-2.47-4.05s-2.85 1.93-2.85 3.92V22H8V8z" /></svg> },
+                  { href: 'https://upwork.com/freelancers/gamal', label: 'Upwork', icon: <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 11.4a3.6 3.6 0 0 1-3.6-3.6 3.6 3.6 0 0 1 3.6-3.6 3.6 3.6 0 0 1 3.6 3.6 3.6 3.6 0 0 1-3.6 3.6zm0-5.4a1.8 1.8 0 1 0 0 3.6 1.8 1.8 0 0 0 0-3.6zM5.4 14.6a3.6 3.6 0 0 1-3.6-3.6V4.2h1.8v6.8c0 1 .8 1.8 1.8 1.8s1.8-.8 1.8-1.8V4.2H9V9c1.3 2.5 3.2 5 6 5v1.8c-3.6 0-5.9-2.8-7.3-5.3-.5 2.5-2.4 4.1-2.3 4.1z" /></svg> },
                 ].map(s => (
                   <a key={s.label} className="social reveal delay-4" href={s.href} target="_blank" rel="noopener noreferrer">
                     {s.icon}{s.label}
                   </a>
                 ))}
                 <a className="social reveal delay-5" href="#top">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 19V5M5 12l7-7 7 7" /></svg>
                   Back to top
                 </a>
               </div>
