@@ -30,6 +30,7 @@ export default function Nav({ simple = false }: NavProps) {
               <a href="#experience">Experience</a>
               <a href="#skills">Skills</a>
               <a href="#projects">Projects</a>
+              <Link href="blog">Blog</Link>
               <a href="#contact">Contact</a>
             </div>
           </>

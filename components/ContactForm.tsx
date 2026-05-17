@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 
-const PROJECT_TYPES = ['Full-stack app', 'Marketplace', 'SaaS', 'Shopify', 'Other']
+const PROJECT_TYPES = ['Full-stack app', 'Backend', 'Frontend', 'Wordpress', 'Shopify', 'Other']
 const GETFORM_ENDPOINT = process.env.NEXT_PUBLIC_GETFORM_ENDPOINT ?? ''
 
 export default function ContactForm() {
@@ -74,17 +74,6 @@ export default function ContactForm() {
             </span>
           ))}
         </div>
-      </div>
-
-      <div className="row">
-        <label htmlFor="cf-budget">Budget range</label>
-        <select id="cf-budget" name="budget">
-          <option>Let&apos;s discuss</option>
-          <option>$1k — $5k</option>
-          <option>$5k — $15k</option>
-          <option>$15k — $40k</option>
-          <option>$40k+</option>
-        </select>
       </div>
 
       <div className="row">

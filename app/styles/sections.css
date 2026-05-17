@@ -7,7 +7,7 @@
 
 .about-quote { position: relative; padding-top: 40px; }
 .about-quote .qmark {
-  position: absolute; top: -50px; left: -10px;
+  position: absolute; top: -55px; left: -10px;
   font-family: var(--display); font-size: 220px; line-height: 1; color: var(--orange); font-weight: 600;
 }
 .about-quote p { font-family: var(--display); font-weight: 400; font-size: clamp(26px,2.5vw,38px); line-height: 1.25; letter-spacing: -0.015em; color: var(--ink); }
@@ -15,6 +15,8 @@
 .about-quote .signature { margin-top: 36px; display: inline-flex; align-items: center; gap: 14px; padding-top: 24px; border-top: 1px solid var(--line); }
 .about-quote .signature .name { font-family: var(--display); font-style: italic; font-size: 22px; color: var(--ink); }
 .about-quote .signature .role { color: var(--ink-3); font-size: 13px; }
+
+.hl { background: linear-gradient(180deg, transparent 65%, rgba(232,93,38,0.22) 65%); padding: 0 4px; font-weight: 700; }
 
 .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
 .stat-card {
@@ -37,13 +39,13 @@
 @media (max-width: 640px) { .bento { grid-template-columns: repeat(2,1fr); grid-auto-rows: 130px; } }
 
 .bento-card {
-  background: var(--card); border: 1px solid var(--line); border-radius: 22px; padding: 22px;
+  background: var(--card); border: 1px solid var(--line); border-radius: 22px; padding: 20px;
   position: relative; overflow: hidden;
   transition: transform 240ms cubic-bezier(.2,.7,.2,1), box-shadow 240ms ease, border-color 240ms ease;
   display: flex; flex-direction: column; justify-content: space-between;
 }
 .bento-card:hover { transform: translateY(-6px); border-color: var(--accent, var(--orange)); box-shadow: 0 18px 40px -22px var(--accent-soft, rgba(232,93,38,0.35)); }
-.bento-card .top { display: flex; align-items: center; justify-content: space-between; }
+.bento-card .top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 5px;}
 .bento-card .icon { width: 44px; height: 44px; border-radius: 14px; display: grid; place-items: center; background: var(--accent-soft, rgba(232,93,38,0.15)); color: var(--accent, var(--orange)); font-weight: 600; }
 .bento-card .icon svg { width: 22px; height: 22px; }
 .bento-card .num { font-family: var(--display); color: var(--ink-3); font-size: 13px; letter-spacing: 0.05em; }
