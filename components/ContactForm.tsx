@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { useForm } from 'react-hook-form'
+import { useForm, useWatch } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { Forminit } from 'forminit'
@@ -26,15 +26,15 @@ export default function ContactForm() {
     register,
     handleSubmit,
     setValue,
-    watch,
     reset,
+    control,
     formState: { errors },
   } = useForm<ContactFormData>({
     resolver: zodResolver(schema),
     defaultValues: { project_type: 'Full-stack app' },
   })
 
-  const selectedType = watch('project_type')
+  const selectedType = useWatch({ control, name: 'project_type', defaultValue: 'Full-stack app' })
 
   async function onSubmit(data: ContactFormData) {
     setStatus('sending')

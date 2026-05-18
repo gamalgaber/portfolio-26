@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 import { PROJECTS, FILTER_COUNTS, PROJECTS_MAP, type Project, type FilterKey, type ProjectKey } from '@/lib/projects'
 
 type Filter = 'all' | FilterKey
@@ -161,7 +162,7 @@ export default function ProjectFilters() {
               <p>I&apos;m currently accepting freelance and contract work. Tell me about your project — Laravel, Next.js, Shopify, AI tooling, or anything full-stack.</p>
             </div>
             <div className="actions">
-              <a className="primary" href="/#contact">Start a project <span>→</span></a>
+              <Link className="primary" href="/#contact">Start a project <span>→</span></Link>
               <a className="ghost" href="mailto:gamalgaber003@gmail.com">Email me directly <span>↗</span></a>
             </div>
           </div>

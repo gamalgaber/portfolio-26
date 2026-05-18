@@ -17,6 +17,7 @@ export default function Footer() {
     const ua = navigator.userAgent
     const isMobile = /iPhone|Android|iPad/.test(ua)
     const os = /Mac/.test(ua) ? 'macOS' : /Win/.test(ua) ? 'Windows' : /Linux/.test(ua) ? 'Linux' : 'Unknown'
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setDevice(`${isMobile ? 'Mobile' : 'Desktop'} · ${os}`)
   }, [])
 

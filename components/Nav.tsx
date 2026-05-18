@@ -4,11 +4,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState, useEffect } from 'react'
 
-type NavProps = {
-  simple?: boolean
-}
-
-export default function Nav({ simple = false }: NavProps) {
+export default function Nav() {
   const [isOpen, setIsOpen] = useState(false)
 
   const currentRoute = usePathname();
