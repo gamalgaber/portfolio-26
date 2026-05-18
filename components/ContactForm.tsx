@@ -1,46 +1,63 @@
 'use client'
 
 import { useState } from 'react'
+import { useForm } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { z } from 'zod'
+import { Forminit } from 'forminit'
+
+const schema = z.object({
+  name: z.string().min(2, 'Name must be at least 2 characters'),
+  email: z.string().email('Enter a valid email address'),
+  project_type: z.string().min(1, 'Please select a project type'),
+  message: z.string().min(20, 'Please add at least 20 characters'),
+})
+
+type ContactFormData = z.infer<typeof schema>
 
 const PROJECT_TYPES = ['Full-stack app', 'Backend', 'Frontend', 'Wordpress', 'Shopify', 'Other']
-const GETFORM_ENDPOINT = process.env.NEXT_PUBLIC_GETFORM_ENDPOINT ?? ''
+
+const forminit = new Forminit({ proxyUrl: '/api/forminit' })
 
 export default function ContactForm() {
-  const [selected, setSelected] = useState('Full-stack app')
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle')
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault()
-    if (!GETFORM_ENDPOINT) return
+  const {
+    register,
+    handleSubmit,
+    setValue,
+    watch,
+    reset,
+    formState: { errors },
+  } = useForm<ContactFormData>({
+    resolver: zodResolver(schema),
+    defaultValues: { project_type: 'Full-stack app' },
+  })
 
+  const selectedType = watch('project_type')
+
+  async function onSubmit(data: ContactFormData) {
     setStatus('sending')
-    const form = e.currentTarget
-    const data = new FormData(form)
-    data.set('project_type', selected)
 
-    try {
-      const res = await fetch(GETFORM_ENDPOINT, {
-        method: 'POST',
-        body: data,
-        headers: { Accept: 'application/json' },
-      })
-      if (res.ok) {
-        setStatus('success')
-        form.reset()
-        setSelected('Full-stack app')
-      } else {
-        setStatus('error')
-      }
-    } catch {
+    const formData = new FormData()
+    formData.append('name', data.name)
+    formData.append('email', data.email)
+    formData.append('project_type', data.project_type)
+    formData.append('message', data.message)
+
+    const { error } = await forminit.submit('8yufbmb1da4', formData)
+
+    if (error) {
       setStatus('error')
+      return
     }
+
+    setStatus('success')
+    reset()
   }
 
   return (
-    <form className="contact-form reveal delay-2" onSubmit={handleSubmit} noValidate>
-      {/* Honeypot spam guard */}
-      <input type="text" name="_gotcha" style={{ display: 'none' }} tabIndex={-1} />
-
+    <form className="contact-form reveal delay-2" onSubmit={handleSubmit(onSubmit)} noValidate>
       <div className="form-head">
         <h3>Tell me about your project</h3>
         <p>I&apos;ll get back to you within 24 hours — usually faster.</p>
@@ -49,41 +66,60 @@ export default function ContactForm() {
       <div className="row two">
         <div className="row">
           <label htmlFor="cf-name">Your name</label>
-          <input id="cf-name" name="name" type="text" placeholder="Jane Doe" autoComplete="name" required />
+          <input
+            id="cf-name"
+            type="text"
+            placeholder="Jane Doe"
+            autoComplete="name"
+            aria-invalid={!!errors.name}
+            {...register('name')}
+          />
+          {errors.name && <span className="field-error">{errors.name.message}</span>}
         </div>
         <div className="row">
           <label htmlFor="cf-email">Email</label>
-          <input id="cf-email" name="email" type="email" placeholder="jane@company.com" autoComplete="email" required />
+          <input
+            id="cf-email"
+            type="email"
+            placeholder="jane@company.com"
+            autoComplete="email"
+            aria-invalid={!!errors.email}
+            {...register('email')}
+          />
+          {errors.email && <span className="field-error">{errors.email.message}</span>}
         </div>
       </div>
 
       <div className="row">
         <label>What are you working on?</label>
+        <input type="hidden" {...register('project_type')} />
         <div className="chip-row">
           {PROJECT_TYPES.map(t => (
             <span
               key={t}
-              className={`chip${selected === t ? ' active' : ''}`}
-              onClick={() => setSelected(t)}
+              className={`chip${selectedType === t ? ' active' : ''}`}
+              onClick={() => setValue('project_type', t, { shouldValidate: true })}
               role="radio"
-              aria-checked={selected === t}
+              aria-checked={selectedType === t}
               tabIndex={0}
-              onKeyDown={e => e.key === 'Enter' && setSelected(t)}
+              onKeyDown={e => e.key === 'Enter' && setValue('project_type', t, { shouldValidate: true })}
             >
               {t}
             </span>
           ))}
         </div>
+        {errors.project_type && <span className="field-error">{errors.project_type.message}</span>}
       </div>
 
       <div className="row">
         <label htmlFor="cf-message">Project details</label>
         <textarea
           id="cf-message"
-          name="message"
           placeholder="A few sentences about what you're building, your timeline, and what success looks like."
-          required
+          aria-invalid={!!errors.message}
+          {...register('message')}
         />
+        {errors.message && <span className="field-error">{errors.message.message}</span>}
       </div>
 
       <div className="submit-row">
