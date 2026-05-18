@@ -23,7 +23,7 @@ export default function BlogPage() {
       <div className="page-halos" aria-hidden="true">
         <i className="h1" /><i className="h2" /><i className="h3" />
       </div>
-      <Nav simple />
+      <Nav />
       <BlogContent />
       <Footer />
     </>
