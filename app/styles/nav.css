@@ -45,6 +45,8 @@
 .nav-links a { padding: 9px 16px; border-radius: 999px; font-size: 14px; color: var(--ink-2); transition: color 200ms ease, background 200ms ease; }
 .nav-links a:hover { color: var(--ink); background: rgba(0,0,0,0.04); }
 
+.nav-links a.active {background-color: var(--ink); color: var(--bg);}
+
 .nav-cta {
   display: inline-flex;
   align-items: center;

@@ -2,8 +2,13 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 export default function Footer() {
+  const currentRoute = usePathname()
+  const isHome = currentRoute === '/'
+  const getHref = (hash: string) => isHome ? hash : `/${hash}`
+
   const [device, setDevice] = useState('Detecting…')
   const [newsEmail, setNewsEmail] = useState('')
   const [newsStatus, setNewsStatus] = useState('')
@@ -45,11 +50,11 @@ export default function Footer() {
           <div className="link-col">
             <h4>Navigate</h4>
             <ul>
-              <li><a href="/#about">About</a></li>
-              <li><a href="/#skills">Skills <span className="new-tag">12</span></a></li>
-              <li><a href="/#projects">Projects</a></li>
-              <li><a href="/#projects">Blog</a></li>
-              <li><a href="/#contact">Get in touch</a></li>
+              <li><Link href={getHref('#about')}>About</Link></li>
+              <li><Link href={getHref('#skills')}>Skills <span className="new-tag">12</span></Link></li>
+              <li><Link href={getHref('#projects')}>Projects</Link></li>
+              <li><Link href="/blog">Blog</Link></li>
+              <li><Link href={getHref('#contact')}>Get in touch</Link></li>
             </ul>
           </div>
 
