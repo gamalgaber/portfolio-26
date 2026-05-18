@@ -8,6 +8,8 @@
 @import "./styles/projects.css";
 @import "./styles/sections.css";
 @import "./styles/timeline.css";
+@import "./styles/responsive.css";
+@import "./styles/mobile.css";
 @import "./styles/blog.css";
 
 :root {
