@@ -41,15 +41,15 @@ export default function ProjectsPage() {
           <div className="header-meta">
             <div className="cell reveal d2">
               <div className="k">Total projects</div>
-              <div className="v"><span className="accent">04</span> shipped</div>
+              <div className="v"><span className="accent">05</span> shipped</div>
             </div>
             <div className="cell reveal d3">
               <div className="k">Latest</div>
-              <div className="v">ME.INC, 2025</div>
+              <div className="v">Automera, 2026</div>
             </div>
             <div className="cell reveal d4">
               <div className="k">Stacks</div>
-              <div className="v">Laravel · Next · Shopify</div>
+              <div className="v">Laravel · Next · WordPress · Shopify</div>
             </div>
             <div className="cell reveal d5">
               <div className="k">Status</div>

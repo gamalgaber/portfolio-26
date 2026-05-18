@@ -281,12 +281,14 @@ export default function HomePage() {
               <span className="section-eyebrow reveal">Selected Work</span>
               <h2 className="section-title reveal delay-1">Recent <em>builds.</em></h2>
             </div>
-            <Link href="/projects" className="btn primary">
-              All projects
-<span className="arrow">→</span>            </Link>
           </div>
         </div>
         <ProjectsRail />
+        <div className="container">
+          <div className="projects-view-all reveal">
+            <Link href="/projects" className="btn ghost">View all projects <span className="arrow">→</span></Link>
+          </div>
+        </div>
       </section>
 
       {/* ── CONTACT ───────────────────────────────── */}
