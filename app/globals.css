@@ -27,7 +27,7 @@
   --blue:     #2B7FD4;
   --yellow:   #E8A820;
   --pink:     #F4C0D1;
-  --display:  "Clash Display", var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
+  --display:  var(--font-clash), var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
   --body:     var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
 }
 
