@@ -1,0 +1,76 @@
+body.menu-open { overflow: hidden; }
+  .nav-burger {
+    display: none;
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: var(--ink); color: var(--bg);
+    border: none;
+    place-items: center;
+    position: relative;
+    z-index: 90;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 8px;
+  }
+  .nav-burger:hover {
+    opacity: 0.7;
+    }
+  .nav-burger span {
+    position: absolute;
+    left: 12px; right: 12px;
+    height: 2px;
+    background: currentColor;
+    border-radius: 2px;
+    transition: transform 220ms ease, top 220ms ease, opacity 180ms ease;
+  }
+  .nav-burger span:nth-child(1) { top: 16px; }
+  .nav-burger span:nth-child(2) { top: 21px; }
+  .nav-burger span:nth-child(3) { top: 26px; }
+  body.menu-open .nav-burger span:nth-child(1) { top: 21px; transform: rotate(45deg); }
+  body.menu-open .nav-burger span:nth-child(2) { opacity: 0; }
+  body.menu-open .nav-burger span:nth-child(3) { top: 21px; transform: rotate(-45deg); }
+  .mobile-panel {
+    position: fixed; inset: 0;
+    background: var(--bg);
+    z-index: 85;
+    padding: 100px 28px 40px;
+    transform: translateY(-100%);
+    transition: transform 360ms cubic-bezier(.2,.7,.2,1);
+    overflow-y: auto;
+    display: flex; flex-direction: column;
+  }
+  body.menu-open .mobile-panel { transform: translateY(0); }
+  .mobile-panel .mp-links { display: grid; gap: 4px; margin-top: 10px; }
+  .mobile-panel .mp-links a {
+    font-family: var(--display);
+    font-size: clamp(32px, 7vw, 48px);
+    font-weight: 500;
+    letter-spacing: -0.025em;
+    color: var(--ink);
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+    display: flex; align-items: center; justify-content: space-between;
+  }
+
+  .mobile-panel .mp-links a:hover { color: var(--orange); transform: translateX(3px); }
+  .mobile-panel .mp-links a .arr { color: var(--ink-3); font-size: 0.5em; }
+  .mobile-panel .mp-foot {
+    margin-top: auto;
+    padding-top: 30px;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 20px; flex-wrap: wrap;
+    color: var(--ink-3);
+    font-size: 13px;
+  }
+  .mobile-panel .mp-foot a { color: var(--ink); font-weight: 500; }
+
+  .mp-close {
+    position: absolute; top: 24px; right: 24px;
+    width: 44px; height: 44px; border-radius: 50%;
+    background: var(--ink); color: var(--bg);
+    border: none; display: grid; place-items: center;
+    cursor: pointer; z-index: 5;
+    transition: transform 220ms ease, background 220ms ease;
+  }
+  .mp-close:hover { transform: rotate(90deg); background: var(--orange); }
+  .mp-close svg { width: 18px; height: 18px; }
