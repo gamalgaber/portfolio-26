@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Bricolage_Grotesque } from 'next/font/google'
+import localFont from 'next/font/local'
 import './globals.css'
 
 const bricolage = Bricolage_Grotesque({
@@ -7,6 +8,17 @@ const bricolage = Bricolage_Grotesque({
   weight: ['300', '400', '500', '600', '700'],
   display: 'swap',
   variable: '--font-bricolage',
+})
+
+const clashDisplay = localFont({
+  src: [
+    { path: '../public/fonts/clash-display-400.woff2', weight: '400', style: 'normal' },
+    { path: '../public/fonts/clash-display-500.woff2', weight: '500', style: 'normal' },
+    { path: '../public/fonts/clash-display-600.woff2', weight: '600', style: 'normal' },
+    { path: '../public/fonts/clash-display-700.woff2', weight: '700', style: 'normal' },
+  ],
+  variable: '--font-clash',
+  display: 'swap',
 })
 
 export const metadata: Metadata = {
@@ -95,13 +107,8 @@ const jsonLd = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={bricolage.variable}>
+    <html lang="en" className={`${bricolage.variable} ${clashDisplay.variable}`}>
       <head>
-        <link rel="preconnect" href="https://api.fontshare.com" />
-        <link
-          href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap"
-          rel="stylesheet"
-        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
