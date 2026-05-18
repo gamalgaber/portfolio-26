@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import ProjectFilters from '@/components/ProjectFilters'
@@ -24,12 +25,12 @@ export default function ProjectsPage() {
         <i className="h1" /><i className="h2" /><i className="h3" />
       </div>
 
-      <Nav simple />
+      <Nav />
 
       <header className="page-header">
         <div className="container">
           <div className="crumb reveal">
-            <a href="/">Home</a>
+            <Link href="/">Home</Link>
             <span>/</span>
             <span style={{ color: 'var(--ink-2)' }}>All Projects</span>
           </div>
