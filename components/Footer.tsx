@@ -57,8 +57,8 @@ export default function Footer() {
             <h4>Elsewhere</h4>
             <ul>
               <li><a href="https://github.com/gamalgaber" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></li>
-              <li><a href="https://linkedin.com/in/gamalgaber" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a></li>
-              <li><a href="https://upwork.com/freelancers/gamal" target="_blank" rel="noopener noreferrer">Upwork <span aria-hidden="true">↗</span></a></li>
+              <li><a href="https://www.linkedin.com/in/gamalar" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a></li>
+              <li><a href="https://www.upwork.com/freelancers/~019a10d9a549d96399" target="_blank" rel="noopener noreferrer">Upwork <span aria-hidden="true">↗</span></a></li>
               <li><a href="mailto:gamalgaber003@gmail.com">Email me <span aria-hidden="true">↗</span></a></li>
             </ul>
           </div>
@@ -66,13 +66,13 @@ export default function Footer() {
 
         <div className="footer-meta">
           <div className="cell">
-            <div className="k">© 2025 Gamal Gaber</div>
-            <div className="v">Built with ♥ in Cairo</div>
+            <div className="k">© 2026 Gamal Gaber</div>
+            <div className="v">Built in Cairo</div>
           </div>
           <div className="cell">
-            <div className="k">Instagram</div>
+            <div className="k">Referance</div>
             <div className="v">
-              <a href="https://instagram.com/gamalgaber" target="_blank" rel="noopener noreferrer">@gamalgaber</a>
+              <a href="https://www.framer.com/" target="_blank" rel="noopener noreferrer">framer</a>
             </div>
           </div>
           <div className="cell">
